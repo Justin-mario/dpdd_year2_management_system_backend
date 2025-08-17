@@ -9,7 +9,7 @@ import lombok.Setter;
 
 public class StudentDetailsDto {
 
-    private int studentNumber;
+    private Long studentNumber;
 
     private String firstName;
 

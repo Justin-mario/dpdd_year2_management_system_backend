@@ -1,0 +1,11 @@
+task forceClean {
+    doLast {
+        def testResultsDir = file("${buildDir}/test-results")
+        if (testResultsDir.exists()) {
+            println "Forcibly removing test-results directory..."
+            testResultsDir.deleteDir()
+        }
+    }
+}
+
+test.finalizedBy forceClean
